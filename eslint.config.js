@@ -38,7 +38,7 @@ export default tseslint.config(
       },
     },
     settings: {
-      react: { version: "detect" },
+      "react": { version: "detect" },
       "import/resolver": {
         typescript: {
           project: path.resolve(__dirname, "./tsconfig.json"),
@@ -49,14 +49,11 @@ export default tseslint.config(
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
-      import: importPlugin,
+      "import": importPlugin,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true },
-      ],
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "react/prop-types": "off",
       "react/jsx-no-target-blank": "off",
 
@@ -64,21 +61,16 @@ export default tseslint.config(
       "import/order": [
         "warn",
         {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            ["parent", "sibling", "index"],
-          ],
-          pathGroups: [
+          "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+          "pathGroups": [
             {
               pattern: "@/**",
               group: "internal",
             },
           ],
-          pathGroupsExcludedImportTypes: ["builtin"],
+          "pathGroupsExcludedImportTypes": ["builtin"],
           "newlines-between": "always",
-          alphabetize: {
+          "alphabetize": {
             order: "asc",
             caseInsensitive: true,
           },
