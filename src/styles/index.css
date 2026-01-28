@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* 변수 정의 */
+@theme {
+  --font-sans: "Noto Sans KR", sans-serif;
+  --color-navy: #052b57;
+  --color-orange: #ff8d28;
+  --color-mint: #00c3d0;
+  --color-purple: #6155f5;
+  --color-green: #34c759;
+  --color-red: #ff383c;
+  --color-gray: #cacaca;
+  --color-light-gray: #e2e8ef;
+  --color-silver-gray: #f1f3f9;
+  --color-dark-gray: #1e2a2e;
+}
+
+/* 공통 스타일 */
+@layer components {
+  body {
+    @apply md:bg-silver-gray bg-white font-sans;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  .auth-main {
+    @apply md:flex md:min-h-screen md:items-center md:justify-center;
+  }
+
+  .auth-wrap {
+    @apply rounded-xl bg-white p-5 md:m-auto md:w-122.5 md:p-10;
+  }
+
+  .auth-list {
+    @apply mb-11.5 flex flex-col gap-11;
+  }
+
+  .error {
+    @apply text-red mt-2;
+  }
+
+  .bg-rounded {
+    @apply bg-white md:rounded-xl md:p-10;
+  }
+
+  .box-shadow {
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.05);
+  }
+
+  .bottom-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
